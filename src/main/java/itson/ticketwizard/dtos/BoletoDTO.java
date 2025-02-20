@@ -10,19 +10,29 @@ package itson.ticketwizard.dtos;
  */
 public class BoletoDTO {
     
+    private Integer idUsuario;
     private float precio;
     private Integer numControl;
     private String disponibilidad;
     private Integer numAsiento;
     private String fila;
    
-    public BoletoDTO(float precio, int numControl, String disponibilidad, int numAsiento, String fila) {
+    public BoletoDTO(Integer idUsuaeio, float precio, int numControl, String disponibilidad, int numAsiento, String fila) {
+        this.idUsuario = idUsuario;
         this.precio = precio;
         this.numControl = numControl;
         this.disponibilidad = disponibilidad;
         this.numAsiento = numAsiento;
         this.fila = fila;
         
+    }
+
+    public Integer getIdUsuario() {
+        return idUsuario;
+    }
+
+    public void setIdUsuario(Integer idUsuario) {
+        this.idUsuario = idUsuario;
     }
 
     public float getPrecio() {

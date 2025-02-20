@@ -15,11 +15,33 @@ import java.sql.Date;
         private Date fechahora;
         private float monto;
         private float comision;
+        private Integer idApartado;
+        private Integer idVendedor;
+        private Integer idComprador;
 
-        public TransaccionDTO(Date fechahora, float monto, float comision) {
+        public TransaccionDTO(Date fechahora, float monto, float comision, Integer idApartado, Integer idVendedor, Integer idComprador) {
             this.fechahora = fechahora;
             this.monto = monto;
             this.comision = comision;
+            this.idApartado = idApartado;
+            this.idVendedor = idVendedor;
+            this.idComprador = idComprador;
+        }
+
+        public Integer getIdVendedor() {
+            return idVendedor;
+        }
+
+        public void setIdVendedor(Integer idVendedor) {
+            this.idVendedor = idVendedor;
+        }
+
+        public Integer getIdComprador() {
+            return idComprador;
+        }
+
+        public void setIdComprador(Integer idComprador) {
+            this.idComprador = idComprador;
         }
 
         public Date getFechahora() {

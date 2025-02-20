@@ -17,7 +17,7 @@ public class BoletoDAO {
     
     private ManejadorConexiones manejadorConexiones;
     
-    public BoletoDAO(ManejadorConexiones manejadorConexiones){
+    public BoletoDAO(){
         this.manejadorConexiones = manejadorConexiones;
     }
     
