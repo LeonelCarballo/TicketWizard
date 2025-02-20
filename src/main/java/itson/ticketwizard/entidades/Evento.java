@@ -48,6 +48,14 @@ public class Evento {
         this.codigoPostal = codigoPostal;
     }
 
+    public String getNombreLocal() {
+        return nombreLocal;
+    }
+
+    public void setNombreLocal(String nombreLocal) {
+        this.nombreLocal = nombreLocal;
+    }
+
     public int getIdEvento() {
         return idEvento;
     }

@@ -19,6 +19,30 @@ public class Boleto {
     private int idEvento;
     private int idUsuario;
 
+    public Boleto(int numSerie, float precio, int numControl, String disponibilidad, int numAsiento, String fila, int idEvento, int idUsuario) {
+        this.numSerie = numSerie;
+        this.precio = precio;
+        this.numControl = numControl;
+        this.disponibilidad = disponibilidad;
+        this.numAsiento = numAsiento;
+        this.fila = fila;
+        this.idEvento = idEvento;
+        this.idUsuario = idUsuario;
+    }
+
+    public Boleto(float precio, int numControl, String disponibilidad, int numAsiento, String fila, int idEvento, int idUsuario) {
+        this.precio = precio;
+        this.numControl = numControl;
+        this.disponibilidad = disponibilidad;
+        this.numAsiento = numAsiento;
+        this.fila = fila;
+        this.idEvento = idEvento;
+        this.idUsuario = idUsuario;
+    }
+
+    public Boleto() {
+    }
+
     public int getNumSerie() {
         return numSerie;
     }

@@ -15,8 +15,8 @@ public class UsuarioDAO {
     
     private ManejadorConexiones manejadorConexiones;
 
-    public UsuarioDAO(ManejadorConexiones manejadorConexiones) {
-        this.manejadorConexiones = manejadorConexiones;
+    public UsuarioDAO() {
+        this.manejadorConexiones = new ManejadorConexiones();
     }
     
     public UsuarioDTO obtenerUsuarioId(Integer idUsuario) throws SQLException{
@@ -83,6 +83,14 @@ public class UsuarioDAO {
             return false;
 
         }
+
+    public UsuarioDTO validarCredenciales(String correoElectronico, String contrasena) {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
+
+    public boolean registrarUsuario(UsuarioDTO usuarioDTO) {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
     }
 
 

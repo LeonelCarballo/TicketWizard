@@ -17,7 +17,7 @@ public class BoletoDTO {
     private Integer numAsiento;
     private String fila;
    
-    public BoletoDTO(Integer idUsuaeio, float precio, int numControl, String disponibilidad, int numAsiento, String fila) {
+    public BoletoDTO(Integer idUsuario, float precio, int numControl, String disponibilidad, int numAsiento, String fila) {
         this.idUsuario = idUsuario;
         this.precio = precio;
         this.numControl = numControl;
