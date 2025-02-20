@@ -4,16 +4,27 @@
  */
 package itson.ticketwizard.presentacion;
 
+import itson.ticketwizard.control.BoletoControl;
+import itson.ticketwizard.entidades.Boleto;
+import javax.swing.JButton;
+import javax.swing.JComboBox;
+import javax.swing.SwingUtilities;
+
 /**
  *
  * @author Dana Chavez
  */
 public class BoletoForm extends javax.swing.JFrame {
+    
+    private BoletoControl boletoControl;
+    private JComboBox<Boleto> comboBoxBoletos;
+    private JButton btnSeleccionar;
 
     /**
      * Creates new form BoletoForm
      */
     public BoletoForm() {
+        this.boletoControl = new BoletoControl();
         initComponents();
     }
 
@@ -42,35 +53,23 @@ public class BoletoForm extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String args[]) {
-        /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-         */
-        try {
-            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
-                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
-                    break;
-                }
-            }
-        } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(BoletoForm.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(BoletoForm.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(BoletoForm.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(BoletoForm.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        }
-        //</editor-fold>
+    private void cargarBoletosDisponibles() {
+        // Obtener la lista de boletos disponibles desde el controlador
+        List<Boleto> boletos = boletoControl.obtenerBoletosDisponibles(1); // Cambia el ID del evento según sea necesario
 
-        /* Create and display the form */
-        java.awt.EventQueue.invokeLater(new Runnable() {
+        // Limpiar el JComboBox antes de agregar nuevos elementos
+        comboBoxBoletos.removeAllItems();
+
+        // Agregar los boletos al JComboBox
+        for (Boleto boleto : boletos) {
+            comboBoxBoletos.addItem(boleto);
+        }
+    }
+
+    public static void main(String[] args) {
+        // Ejecutar la interfaz gráfica en el hilo de despacho de eventos de Swing
+        SwingUtilities.invokeLater(new Runnable() {
+            @Override
             public void run() {
                 new BoletoForm().setVisible(true);
             }
