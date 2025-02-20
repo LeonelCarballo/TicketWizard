@@ -1,17 +1,13 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
-package itson.ticketwizard.entidades;
+
+package itson.ticketwizard.dtos;
 
 import java.sql.Date;
 
 /**
  *
- * @author Dana Chavez
+ * @author payde
  */
-public class Usuario {
-   
+public class nuevoUsuarioDto {
     private int idUsuario;
     private String nombres;
     private String apellidoP;
@@ -22,7 +18,19 @@ public class Usuario {
     private Date fechaNac;
     private String numTelefono;
     private String correoElectronico;
-    private int saldo;
+
+    public nuevoUsuarioDto(int idUsuario, String nombres, String apellidoP, String apellidoM, String calle, int numeroCasa, String colonia, Date fechaNac, String numTelefono, String correoElectronico) {
+        this.idUsuario = idUsuario;
+        this.nombres = nombres;
+        this.apellidoP = apellidoP;
+        this.apellidoM = apellidoM;
+        this.calle = calle;
+        this.numeroCasa = numeroCasa;
+        this.colonia = colonia;
+        this.fechaNac = fechaNac;
+        this.numTelefono = numTelefono;
+        this.correoElectronico = correoElectronico;
+    }
 
     public int getIdUsuario() {
         return idUsuario;
@@ -103,41 +111,6 @@ public class Usuario {
     public void setCorreoElectronico(String correoElectronico) {
         this.correoElectronico = correoElectronico;
     }
-
-    public int getSaldo() {
-        return saldo;
-    }
-
-    public void setSaldo(int saldo) {
-        this.saldo = saldo;
-    }
-
-    @Override
-    public int hashCode() {
-        int hash = 3;
-        hash = 53 * hash + this.idUsuario;
-        return hash;
-    }
-
-    @Override
-    public boolean equals(Object obj) {
-        if (this == obj) {
-            return true;
-        }
-        if (obj == null) {
-            return false;
-        }
-        if (getClass() != obj.getClass()) {
-            return false;
-        }
-        final Usuario other = (Usuario) obj;
-        return this.idUsuario == other.idUsuario;
-    }
-
-    @Override
-    public String toString() {
-        return "Usuario{" + "idUsuario=" + idUsuario + ", nombres=" + nombres + ", apellidoP=" + apellidoP + ", apellidoM=" + apellidoM + ", calle=" + calle + ", numeroCasa=" + numeroCasa + ", colonia=" + colonia + ", fechaNac=" + fechaNac + ", numTelefono=" + numTelefono + ", correoElectronico=" + correoElectronico + ", saldo=" + saldo + '}';
-    }
     
-    
+      
 }
