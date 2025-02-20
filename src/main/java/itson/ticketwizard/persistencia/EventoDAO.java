@@ -65,7 +65,7 @@ public class EventoDAO {
                                }
                                
                            } catch (SQLException ex){
-                               System.err.println("Erros la consultar los artistas: " + ex.getMessage());
+                               System.err.println("Error al obtener los eventos: " + ex.getMessage());
                            }    
                             return listaEventos;
     }

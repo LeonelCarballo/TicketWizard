@@ -12,14 +12,41 @@ import java.sql.Date;
  */
 public class Evento {
     
-    private int idEvento;
+    private Integer idEvento;
     private String nombre;
+    private String nombreLocal;
     private String descripcion;
     private Date fechaHora;
     private String ciudad;
     private String calle;
     private String colonia;
     private String codigoPostal;
+    
+    public Evento() {
+    }
+
+    public Evento(String nombre, String nombreLocal, String descripcion, Date fechaHora, String ciudad, String calle, String colonia, String codigoPostal) {
+        this.nombre = nombre;
+        this.nombreLocal = nombreLocal;
+        this.descripcion = descripcion;
+        this.fechaHora = fechaHora;
+        this.ciudad = ciudad;
+        this.calle = calle;
+        this.colonia = colonia;
+        this.codigoPostal = codigoPostal;
+    }
+      
+    public Evento(Integer idEvento, String nombre, String nombreLocal, String descripcion, Date fechaHora, String ciudad, String calle, String colonia, String codigoPostal) {
+        this.idEvento = idEvento;
+        this.nombre = nombre;
+        this.nombreLocal = nombreLocal;
+        this.descripcion = descripcion;
+        this.fechaHora = fechaHora;
+        this.ciudad = ciudad;
+        this.calle = calle;
+        this.colonia = colonia;
+        this.codigoPostal = codigoPostal;
+    }
 
     public int getIdEvento() {
         return idEvento;

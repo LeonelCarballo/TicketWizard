@@ -53,7 +53,7 @@ public class TransaccionDAO {
         
     }
     
-    public List <Transaccion> consultarTransaccionesPorUsuario(){
+    public List <Transaccion> consultarTransaccionesPorUsuario(Integer idUsuario){
         String codigoSQL = """
                             SELECT
                                 idTransaccion,
@@ -63,13 +63,16 @@ public class TransaccionDAO {
                                 idApartado,
                                 idVendedor,
                                 idComprador
-                           FROM Transacciones;
+                           FROM Transacciones WHERE idComprador = ? OR idVendedor = ?;
                            """;
                             List <Transaccion> listaTransacciones = new LinkedList<>();
                            try{
                                Connection conexion = this.manejadorConexiones.crearConexion();
                                PreparedStatement comando = conexion.prepareStatement(codigoSQL);
                                ResultSet resultadosConsulta = comando.executeQuery();
+                               
+                                comando.setInt(1, idUsuario);
+                                comando.setInt(2, idUsuario);
                                
                                // Nos movemos a cada una de las filas devueltas
                                while(resultadosConsulta.next()){

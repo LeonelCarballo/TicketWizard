@@ -15,38 +15,11 @@ import javax.swing.JFrame;
  */
 public class SeleccionarBoletos extends javax.swing.JPanel {
     
-    private Image fondo;
-    
     /**
      * Creates new form SeleccionarBoletos
      */
     public SeleccionarBoletos() {
         initComponents();
-    }
-    
-    public SeleccionarBoletos(String rutaImagen) {
-        fondo = new ImageIcon("res/fondo.png").getImage();
-    }
-
-    @Override
-    protected void paintComponent(Graphics g) {
-        super.paintComponent(g);
-        fondo = new ImageIcon(getClass().getResource("res/fondo.png")).getImage();
-        if (fondo != null) {
-            g.drawImage(fondo, 0, 0, getWidth(), getHeight(), this);
-        }
-    }
-
-    public static void main(String[] args) {
-        JFrame frame = new JFrame("JPanel con Fondo");
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        frame.setSize(960, 540);
-
-        // Crear el panel con la imagen de fondo
-        SeleccionarBoletos panel = new SeleccionarBoletos("res/fondo.png");
-        frame.add(panel);
-
-        frame.setVisible(true);
     }
 
     /**
