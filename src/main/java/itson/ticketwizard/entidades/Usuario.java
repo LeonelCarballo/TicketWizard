@@ -17,12 +17,12 @@ public class Usuario {
     private String apellidoP;
     private String apellidoM;
     private String calle;
-    private int numeroCasa;
+    private Integer numeroCasa;
     private String colonia;
     private Date fechaNac;
     private String numTelefono;
     private String correoElectronico;
-    private int saldo;
+    private Integer saldo;
 
     public int getIdUsuario() {
         return idUsuario;
