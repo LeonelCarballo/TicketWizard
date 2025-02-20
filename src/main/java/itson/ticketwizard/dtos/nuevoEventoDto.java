@@ -10,7 +10,7 @@ import java.sql.Date;
  *
  * @author payde
  */
-public class nuevoEventoDto {
+public class NuevoEventoDTO {
     private int idEvento;
     private String nombre;
     private String descripcion;
@@ -20,7 +20,7 @@ public class nuevoEventoDto {
     private String colonia;
     private String codigoPostal;
 
-    public nuevoEventoDto(int idEvento, String nombre, String descripcion, Date fechaHora, String ciudad, String calle, String colonia, String codigoPostal) {
+    public NuevoEventoDTO(int idEvento, String nombre, String descripcion, Date fechaHora, String ciudad, String calle, String colonia, String codigoPostal) {
         this.idEvento = idEvento;
         this.nombre = nombre;
         this.descripcion = descripcion;

@@ -7,7 +7,7 @@ import java.sql.Date;
  *
  * @author payde
  */
-public class nuevoUsuarioDto {
+public class NuevoUsuarioDTO {
     private int idUsuario;
     private String nombres;
     private String apellidoP;
@@ -19,7 +19,7 @@ public class nuevoUsuarioDto {
     private String numTelefono;
     private String correoElectronico;
 
-    public nuevoUsuarioDto(int idUsuario, String nombres, String apellidoP, String apellidoM, String calle, int numeroCasa, String colonia, Date fechaNac, String numTelefono, String correoElectronico) {
+    public NuevoUsuarioDTO(int idUsuario, String nombres, String apellidoP, String apellidoM, String calle, int numeroCasa, String colonia, Date fechaNac, String numTelefono, String correoElectronico) {
         this.idUsuario = idUsuario;
         this.nombres = nombres;
         this.apellidoP = apellidoP;

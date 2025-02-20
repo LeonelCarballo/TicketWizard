@@ -5,7 +5,7 @@ package itson.ticketwizard.dtos;
  *
  * @author payde
  */
-public class nuevoBoletoDto {
+public class NuevoBoletoDTO {
     private int numSerie;
     private float precio;
     private int numControl;
@@ -15,7 +15,7 @@ public class nuevoBoletoDto {
     private int idEvento;
     private int idUsuario;
 
-    public nuevoBoletoDto(int numSerie, float precio, int numControl, String disponibilidad, int numAsiento, String fila, int idEvento, int idUsuario) {
+    public NuevoBoletoDTO(int numSerie, float precio, int numControl, String disponibilidad, int numAsiento, String fila, int idEvento, int idUsuario) {
         this.numSerie = numSerie;
         this.precio = precio;
         this.numControl = numControl;
