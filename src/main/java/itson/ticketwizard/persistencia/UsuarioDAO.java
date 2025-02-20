@@ -12,5 +12,6 @@ public class UsuarioDAO {
     public UsuarioDAO(ManejadorConexiones manejadorConexiones) {
         this.manejadorConexiones = manejadorConexiones;
     }
-          
+    
+    
 }
