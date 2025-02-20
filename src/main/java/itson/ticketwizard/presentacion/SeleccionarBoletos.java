@@ -24,8 +24,6 @@ public class SeleccionarBoletos extends javax.swing.JPanel {
         initComponents();
     }
     
-
-
     public SeleccionarBoletos(String rutaImagen) {
         fondo = new ImageIcon("res/fondo.png").getImage();
     }
@@ -33,6 +31,7 @@ public class SeleccionarBoletos extends javax.swing.JPanel {
     @Override
     protected void paintComponent(Graphics g) {
         super.paintComponent(g);
+        fondo = new ImageIcon(getClass().getResource("res/fondo.png")).getImage();
         if (fondo != null) {
             g.drawImage(fondo, 0, 0, getWidth(), getHeight(), this);
         }
